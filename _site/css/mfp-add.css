@@ -1,0 +1,313 @@
+@charset "UTF-8"; /* mailform pro用 追加css */
+.contact-contents {
+  padding: 30px 3%;
+}
+
+.contact__form {
+  display: block;
+}
+
+form#mailformpro {
+  width: 100%;
+  padding: 0;
+}
+
+.contact__form table {
+  width: 100%;
+}
+
+.contact__form tbody {
+}
+
+.contact__form tr {
+}
+
+.entry .section_ttl {
+  font-family: var(--font-family-3);
+  font-style: italic;
+  line-height: 1;
+  color: var(--main-color);
+}
+
+.entry .section_subttl {
+  font-style: unset;
+  font-size: 16px;
+  margin-bottom: 30px;
+}
+
+.entry-contents .contact__form td label {
+  margin-bottom: 15px;
+}
+
+.entry-contents .contact__form td label:nth-last-child(1) {
+  margin-bottom: 0;
+}
+
+.entry .steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.entry .steps .step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.entry .steps .step p {
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.entry .steps .step span {
+  display: block;
+}
+
+.entry .steps .step span:first-child {
+  padding: 4px;
+  border-radius: 100%;
+  width: 40px;
+  aspect-ratio: 1/1;
+  border: 1px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.entry .steps .step:not(:last-child) span:first-child::after {
+  content: "";
+  display: block;
+  width: 110px;
+  height: 1px;
+  background: #000;
+  position: absolute;
+  top: 50%;
+  left: 39px;
+  transform: translate(0, -50%);
+  z-index: -1;
+}
+
+.entry .steps .step.active span:first-child {
+  background: var(--main-color);
+  color: #fff;
+}
+
+.entry-contents .contact__form .checkblock label {
+  background: var(--main-light-color);
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.entry-contents .contact__form .checkblock label input {
+  margin-right: 8px;
+}
+
+.entry-contents tr {
+  display: flex;
+}
+.entry-contents .contact__form td {
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+
+.entry-contents .contact__form th {
+  width: 100%;
+  max-width: 250px;
+  text-align: left;
+  font-weight: bold;
+  padding: 20px 0 20px 0;
+  font-size: 14px;
+  position: relative;
+  vertical-align: top;
+  border: none;
+  vertical-align: middle;
+  border-bottom: 1px solid #ddd;
+}
+
+.entry-contents .contact-block .must {
+  display: inline-block;
+  background: rgba(211, 64, 64, 1);
+  color: #fff;
+  font-size: 10px;
+  padding: 6px 12px;
+  position: relative;
+  left: 0;
+  line-height: 1;
+  top: 0;
+  bottom: 0;
+  border-radius: 2px;
+  margin: 0 7px 0 0;
+}
+
+.contact__form td {
+  padding: 20px 0;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+.contact__form td ul {
+  padding: 0;
+  margin: 0;
+}
+
+.contact__form td ul li {
+  list-style: none;
+}
+
+textarea {
+  width: 100% !important;
+  padding: 10px 10px;
+  font-size: 20px;
+  border: 1px solid #ddd;
+  min-height: 100px !important;
+}
+
+.contact__form p {
+  text-align: center;
+  margin: 40px 0;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+  padding: 10px 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+}
+
+.contact__form p a {
+  color: var(--main-color);
+  text-decoration: underline;
+}
+
+/* iOSでのデフォルトスタイルをリセット */
+input[type="submit"],
+input[type="button"] {
+  border-radius: 0;
+  -webkit-box-sizing: content-box;
+  -webkit-appearance: button;
+  appearance: button;
+  border: none;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+input[type="submit"]::-webkit-search-decoration,
+input[type="button"]::-webkit-search-decoration {
+  display: none;
+}
+
+input[type="submit"]::focus,
+input[type="button"]::focus {
+  outline-offset: -2px;
+}
+
+.contact__form .btn {
+  padding: 20px 40px;
+  cursor: pointer;
+  font-weight: bold;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  text-shadow: none;
+}
+
+.contact__form .btn:hover {
+  opacity: 0.6;
+}
+
+.contact__form .btn::before {
+}
+
+.contact-block {
+  margin: 40px 0;
+  padding: 0 3%;
+}
+
+.contact-block .container {
+  max-width: 1000px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 30px 50px;
+}
+
+.contact-block p {
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+.contact-block p span {
+  display: inline-block;
+  position: relative;
+  float: none;
+  padding: 2px 6px;
+}
+
+.contact-block p input[type="checkbox"] {
+  accent-color: green;
+}
+
+.has-text-align-center {
+  text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+  .entry-contents .contact__form th {
+    width: 100%;
+    max-width: unset;
+    float: none;
+    display: block;
+    border: none;
+    padding: 20px 0px 0 0px;
+  }
+
+  .entry-contents .contact__form th .must {
+    left: 10px;
+    left: 0;
+    position: relative;
+    margin: 0 10px 0 0;
+  }
+
+  .contact__form td {
+    width: 100%;
+    float: none;
+    display: block;
+  }
+
+  .contact-block .container {
+    padding: 10px 3% 0;
+  }
+
+  .contact-block {
+    padding: 0;
+  }
+
+  .entry-contents tr {
+
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .entry .steps .step p {
+    width: 100px;
+    gap: 5px;
+  }
+
+  .entry .steps .step:not(:last-child) span:first-child::after {
+    width: 80px;
+  }
+
+  .entry .steps .step span {
+    font-size: 13px;
+  }
+}

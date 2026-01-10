@@ -1,0 +1,123 @@
+{%- set site_title = 'Rebelitto Co., Ltd.' -%} {%- set site_description = '' -%}
+{%- set lower_target = '' -%} {%- if(page_id!='top') -%} {%- set lower_target =
+dir+'/' -%} {%- endif -%}
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    {%- if title -%}
+    <title>{{ title }} | {{ site_title }}</title>
+    {%- else -%}
+    <title>{{ site_title }}</title>
+    {%- endif -%} {%- if description -%}
+    <meta name="description" content="{{ description }}" />
+    {%- else -%}{# 何も設定されていない時 or TOPページ #}
+    <meta name="description" content="{{ site_description }}" />
+    {%- endif -%}
+    <meta name="format-detection" content="telephone=no" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{{ dir }}/img/favicon.png" />
+    <link
+      rel="icon"
+      href="{{ dir }}/img/favicon-192x192.png"
+      sizes="48x48"
+      type="image/png"
+      media="all"
+    />
+    <link
+      rel="apple-touch-icon-precomposed"
+      href="{{ dir }}/img/apple-touch-icon.png"
+      type="image/png"
+      media="all"
+    />
+    <link rel="shortcut icon" href="{{ dir }}/img/favicon.ico" />
+    <link rel="apple-touch-icon" href="{{ dir }}/img/apple-touch-icon.png" />
+
+    <!-- CSS -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ dir }}/mfp.statics/mailformpro.css"
+      media="all"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../mfp.statics/mailformpro.css"
+      media="all"
+    />
+    <link rel="stylesheet" type="text/css" href="{{ dir }}/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="{{ dir }}/css/header.css" />
+    {% if page_id === "top" %}
+    <link rel="stylesheet" type="text/css" href="{{ dir }}/css/top.css" />
+    {% elif page_id === "contact" %}
+    <link rel="stylesheet" type="text/css" href="{{ dir }}/css/add.css" />
+    {% else %}
+    <link rel="stylesheet" type="text/css" href="{{ dir }}/css/lower.css" />
+    {% endif %}
+
+    <!-- Javascript -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{{ dir }}/js/functions.js"></script>
+
+    <!-- Slick CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
+    />
+
+    <!-- Slick JS -->
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+  </head>
+  <div id="custom-cursor"></div>
+  <body class="{{ page_id }}">
+    <header>
+      <div class="inner">
+        <div class="flexbox">
+          <div class="logo">
+            <a href="{{ dir }}/index.html" class="logo_link">
+              <img src="{{ dir }}/img/logo-header.png" alt="logo" class="pc" />
+            </a>
+          </div>
+          <nav>
+            <ul class="nav_list">
+              <li class="nav_item">
+                <a href="{{ dir }}/index.html#about" class="nav_link"
+                  >リベリットについて</a
+                >
+              </li>
+              <li class="nav_item">
+                <a href="{{ dir }}/index.html#business" class="nav_link"
+                  >業務内容</a
+                >
+              </li>
+              <li class="nav_item">
+                <a href="{{ dir }}/index.html#access" class="nav_link"
+                  >アクセス</a
+                >
+              </li>
+            </ul>
+            <div class="cta">
+              <a
+                href="{{ dir }}/contact/index.html"
+                class="cta_link btn bg-main rounded rounded-full"
+                >お問い合わせ</a
+              >
+            </div>
+          </nav>
+          <button class="hamburger" id="hamburger" aria-label="menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+---
+title: Interview
+page_id: interview
+mv_ttl: INTERVIEW
+mv_subttl: 社員インタビュー
+mv_img: mv.png
+mv_breadcrumb: 社員インタビュー一覧
+dir: ..
+---
+
+{% set interviews = collections.interviews %} {% include "header.njk" %}
+
+<main>
+  <article>
+    {% include "lower-mv.njk" %}
+    <section class="px my">
+      <div class="inner">
+        <div class="content-box">
+          <p class="ttl text-h2 color-main-dark mb-30px">営業部</p>
+          <ul class="cards">
+            {% for item in interviews | sort(attribute="data.order") %} {% if item.data.department and item.data.department === "営業部"%}
+            <li class="card">
+              <a href="{{dir}}{{ item.url }}index.html">
+                <div class="card_imgbox mb-20px">
+                  <img src="{{ dir }}/img/{{ page.fileSlug }}/{{ item.fileSlug }}/img_01.png" alt="{{ item.fileSlug }}-img_01" />
+                </div>
+                <div class="card_txtbox">
+                  <p class="card_name mb-20px">{{ item.data.name }}</p>
+                  <p class="card_desc mb-20px">{{ item.data.post_ttl }}</p>
+                  <p class="card_department">{{ item.data.department }}</p>
+                </div>
+              </a>
+            </li>
+            {% endif %} {% endfor %}
+          </ul>
+        </div>
+        <div class="content-box">
+          <p class="ttl text-h2 color-main-dark mb-30px">工務課</p>
+          <ul class="cards">
+            {% for item in interviews | sort(attribute="data.order") %} {% if item.data.department and item.data.department === "工務課"%}
+            <li class="card">
+              <a href="{{dir}}{{ item.url }}index.html">
+                <div class="card_imgbox mb-20px">
+                  <img src="{{ dir }}/img/{{ page.fileSlug }}/{{ item.fileSlug }}/img_01.png" alt="{{ item.fileSlug }}-img_01" />
+                </div>
+                <div class="card_txtbox">
+                  <p class="card_name mb-20px">{{ item.data.name }}</p>
+                  <p class="card_desc mb-20px">{{ item.data.post_ttl }}</p>
+                  <p class="card_department">{{ item.data.department }}</p>
+                </div>
+              </a>
+            </li>
+            {% endif %} {% endfor %}
+          </ul>
+        </div>
+        <div class="content-box two-categories">
+          <div>
+            <p class="ttl text-h2 color-main-dark mb-30px">製作部</p>
+            <ul class="cards">
+              {% for item in interviews | sort(attribute="data.order") %} {% if item.data.department and item.data.department === "製作部"%}
+              <li class="card">
+                <a href="{{dir}}{{ item.url }}index.html">
+                  <div class="card_imgbox mb-20px">
+                    <img src="{{ dir }}/img/{{ page.fileSlug }}/{{ item.fileSlug }}/img_01.png" alt="{{ item.fileSlug }}-img_01" />
+                  </div>
+                  <div class="card_txtbox">
+                    <p class="card_name mb-20px">{{ item.data.name }}</p>
+                    <p class="card_desc mb-20px">{{ item.data.post_ttl }}</p>
+                    <p class="card_department">{{ item.data.department }}</p>
+                  </div>
+                </a>
+              </li>
+              {% endif %} {% endfor %}
+            </ul>
+          </div>
+          <div>
+            <p class="ttl text-h2 color-main-dark mb-30px">鉄構課</p>
+            <ul class="cards">
+              {% for item in interviews | sort(attribute="data.order")  %} {% if item.data.department and item.data.department === "鉄構課"%}
+              <li class="card">
+                <a href="{{dir}}{{ item.url }}index.html">
+                  <div class="card_imgbox mb-20px">
+                    <img src="{{ dir }}/img/{{ page.fileSlug }}/{{ item.fileSlug }}/img_01.png" alt="{{ item.fileSlug }}-img_01" />
+                  </div>
+                  <div class="card_txtbox">
+                    <p class="card_name mb-20px">{{ item.data.name }}</p>
+                    <p class="card_desc mb-20px">{{ item.data.post_ttl }}</p>
+                    <p class="card_department">{{ item.data.department }}</p>
+                  </div>
+                </a>
+              </li>
+              {% endif %} {% endfor %}
+            </ul>
+          </div>
+        </div>
+        <div class="content-box">
+          <p class="ttl text-h2 color-main-dark mb-30px">品質検査室対談</p>
+          <ul class="cards">
+            {% for item in interviews | sort(attribute="data.order") %} {% if item.data.department and item.data.department === "品質検査室"%}
+            <li class="card">
+              <a href="{{dir}}{{ item.url }}index.html">
+                <div class="card_imgbox mb-20px">
+                  <img src="{{ dir }}/img/{{ page.fileSlug }}/{{ item.fileSlug }}/img_01.png" alt="{{ item.fileSlug }}-img_01" />
+                </div>
+                <div class="card_txtbox">
+                  <p class="card_name mb-20px">{{ item.data.name }}</p>
+                  <p class="card_desc mb-20px">{{ item.data.post_ttl }}</p>
+                  <p class="card_department">{{ item.data.department }}</p>
+                </div>
+              </a>
+            </li>
+            {% endif %} {% endfor %}
+          </ul>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+{% include "footer.njk" %}

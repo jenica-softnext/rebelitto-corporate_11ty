@@ -1,0 +1,38 @@
+---
+title: 新着情報
+description:
+page_id: news
+mv_link: news
+mv_ttl: 新着情報
+mv_breadcrumb: 新着情報
+dir: ../..
+---
+
+{% include "header.njk" %}
+
+<main class="lower column">
+  <article>
+    {% include "lower-mv.njk" %}
+    <section class="sec01 px my">
+      {% if page_id === "news" %}
+        <p class="section_ttl text-h1 text-center mb-60px">新着情報</p>
+      {% endif %}
+      <div class="inner mb-60px">
+        <h1 class="text-h1">{{ postTitle }}</h1>
+        <h3 class="mb-60px">{{ postDate }}</h3>
+        {{ content | safe }}
+      </div>
+      {% if page_id === "news-details" %}
+      <div class="detail-navi">
+        <div class="prev"></div>
+        <div class="all">
+          <a href="{{ dir }}/news/1/index.html" class="all btn bg-main rounded mx-auto hv">一覧へ戻る</a>
+        </div>
+        <div class="next"></div>
+      </div>
+      {% endif %}
+    </section>
+  </article>
+</main>
+<!-- main -->
+{% include "footer.njk" %}

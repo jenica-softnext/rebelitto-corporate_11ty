@@ -1,0 +1,36 @@
+---
+title: Contact
+page_id: contact-confirmation
+mv_ttl: CONTACT
+mv_subttl: お問い合わせ
+mv_img: mv.png
+mv_breadcrumb: お問い合わせ
+dir: ..
+---
+
+{% include "header.njk" %}
+<main class="sub bg-grey">
+  {% include "lower-mv.njk" %}
+  <article>
+    <section class="sub-contact sub-thanks px py">
+      <div class="inner">
+        <h2 class="section_ttl text-h1 color-main text-center mb30">
+          お問い合わせ完了
+        </h2>
+        <img
+          class="check-icon"
+          src="{{ dir }}/img/common/check.png"
+          alt="check"
+        />
+        <p class="text-center mb-30px">
+          お問い合わせありがとうございました。<br />担当者よりご連絡させていただきます。
+        </p>
+        <div class="thanksbtn">
+          <a href="#" class="hv btn bg-main mx-auto">トップへ戻る</a>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+
+{% include "footer.njk" %}

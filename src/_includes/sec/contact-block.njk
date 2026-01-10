@@ -1,0 +1,173 @@
+<link
+  rel="stylesheet"
+  href="{{ dir }}/mfp.statics/mailformpro.css"
+  type="text/css"
+/>
+<link rel="stylesheet" href="{{ dir }}/css/mfp-add.css" type="text/css" />
+<div class="entry-contents">
+  <div class="contact-block">
+    <div class="container">
+      <div class="contact__sec">
+        <form
+          class="contact__form"
+          id="mailformpro"
+          action="{{ dir }}/mailformpro/mailformpro.cgi"
+          method="POST"
+        >
+          <table>
+            <tbody>
+              <tr>
+                <th><span class="must">必須</span>お名前</th>
+                <td><input type="text" name="お名前" required /></td>
+              </tr>
+              <tr>
+                <th><span class="must">必須</span>お名前(フリガナ)</th>
+                <td><input type="text" name="お名前(フリガナ)" required /></td>
+              </tr>
+              <tr>
+                <th>電話番号</th>
+                <td><input type="text" name="電話番号" /></td>
+              </tr>
+              <tr>
+                <th>郵便番号</th>
+                <td><input type="text" name="郵便番号" /></td>
+              </tr>
+              <tr>
+                <th>ご住所</th>
+                <td><input type="text" name="ご住所" /></td>
+              </tr>
+              <tr>
+                <th><span class="must">必須</span>メールアドレス</th>
+                <td><input type="text" name="email" required /></td>
+              </tr>
+              <tr>
+                <th><span class="must">必須</span>メールアドレス（確認用）</th>
+                <td>
+                  <input
+                    type="text"
+                    name="email_conf"
+                    required
+                    data-confirm="email"
+                    data-post-disable="1"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <th><span class="must">必須</span>お問い合わせ内容</th>
+                <td>
+                  <textarea
+                    cols="30"
+                    rows="10"
+                    name="お問い合わせ内容"
+                    required
+                  ></textarea>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p>
+            <input
+              type="checkbox"
+              name="プライバシーポリシーに同意"
+              id="privacy-term"
+            /><label for="privacy-term"
+              ><a
+                href="{{ dir }}/privacy/index.html"
+                target="_blank"
+                rel="noopener norefferer"
+                class="color-main"
+                >プライバシーポリシー</a
+              >に同意します</label
+            >
+          </p>
+          <p>
+            <input
+              type="submit"
+              class="btn bg-main mx-auto"
+              value="内容の確認"
+            />
+          </p>
+        </form>
+        <script
+          type="text/javascript"
+          id="mfpjs"
+          src="{{ dir }}/mailformpro/mailformpro.cgi"
+          charset="UTF-8"
+        ></script>
+      </div>
+      <!-- //contact__sec -->
+    </div>
+    <!-- //container -->
+  </div>
+  <!-- //contact-block -->
+</div>
+<!-- //entry-content -->
+{#
+<tr>
+  <th>お問い合わせ項目</th>
+  <td>
+    <ul class="flex row2">
+      <li>
+        <label
+          ><input
+            type="radio"
+            name="お問い合わせ項目"
+            value="新車・中古車販売について"
+            required="required"
+          />新車・中古車販売について</label
+        >
+      </li>
+      <li>
+        <label
+          ><input
+            type="radio"
+            name="お問い合わせ項目"
+            value="在庫について"
+            required="required"
+          />在庫について</label
+        >
+      </li>
+      <li>
+        <label
+          ><input
+            type="radio"
+            name="お問い合わせ項目"
+            value="保険について"
+            required="required"
+          />保険について</label
+        >
+      </li>
+      <li>
+        <label
+          ><input
+            type="radio"
+            name="お問い合わせ項目"
+            value="レンタカーについて"
+            required="required"
+          />レンタカーについて</label
+        >
+      </li>
+      <li>
+        <label
+          ><input
+            type="radio"
+            name="お問い合わせ項目"
+            value="整備・修理・車検について"
+            required="required"
+          />整備・修理・車検について</label
+        >
+      </li>
+      <li>
+        <label
+          ><input
+            type="radio"
+            name="お問い合わせ項目"
+            value="その他"
+            required="required"
+          />その他</label
+        >
+      </li>
+    </ul>
+  </td>
+</tr>
+#}

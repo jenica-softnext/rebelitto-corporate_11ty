@@ -1,0 +1,33 @@
+<section class="lower_mv px py" style="background-image: url({{dir}}/img/lower-mv_global.png); background-repeat: no-repeat; background-position: bottom; background-size: cover;">
+{# <section class="lower_mv px py" style="background-image: url({{dir}}/img/{{page_id}}/mv.png); background-repeat: no-repeat; background-position: bottom; background-size: cover;"> #}
+  <div class="inner">
+    <ul class="breadcrumbs">
+      <li class="breadcrumb">
+        <a href="{{ dir }}/index.html" class="breadcrumb_link">TOP</a>
+      </li>
+      {% if page_id == "news-detail" or page_id == "interview-details" %}
+      <li class="text-main"><span>＞</span></li>
+      <li class="breadcrumb text-main">
+        <a href="{{ dir }}/interviews/index.html" class="breadcrumb_link">{{
+          mv_breadcrumb
+        }}</a>
+      </li>
+      <li class="text-main"><span>＞</span></li>
+      <li class="breadcrumb text-grey">
+        <span>{{ sub_breadcrumb }}</span>
+      </li>
+      {% else %}
+      <li class="text-main"><span>＞</span></li>
+      <li class="breadcrumb text-grey">
+        <span>{{ mv_breadcrumb }}</span>
+      </li>
+      {% endif %}
+    </ul>
+    <div class="txtbox text-center">
+      <div class="mv_ttlbox">
+        <p class="mv_ttl">{{ mv_ttl }}</p>
+        <p class="mv_subttl">{{ mv_subttl }}</p>
+      </div>
+    </div>
+  </div>
+</section>

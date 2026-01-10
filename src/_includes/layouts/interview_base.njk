@@ -1,0 +1,247 @@
+{% include "header.njk" %}
+<main class="interview-detail">
+  <article>
+    {% include "lower-mv.njk" %}
+
+    <!-- Hero / Lead -->
+    <section class="lead px my">
+      <div class="inner">
+        <p class="department">{{ department }}</p>
+        <p class="section_ttl text-h1 color-main-dark">{{ post_ttl }}</p>
+        {% if department == "品質検査室" %}
+        <div class="imgbox imgbox--flex">
+          <div>
+            <div>
+              <img src="{{ dir }}/img/{{ tags }}/interview-06/{{ lead_img }}" alt="{{ name }} main image" />
+            </div>
+            <p class="name">Y・M</p>
+          </div>
+          <div>
+            <div>
+              <img src="{{ dir }}/img/{{ tags }}/interview-07/{{ lead_img }}" alt="{{ name }} main image" />
+            </div>
+            <p class="name">H・S</p>
+          </div>
+        </div>
+        {% else %}
+        <div class="imgbox">
+          <img src="{{ dir }}/img/{{ tags }}/{{ page.fileSlug }}/{{ lead_img }}" alt="{{ name }} main image" />
+        </div>
+        <p class="name">{{ name }}</p>
+        {% endif %}
+      </div>
+    </section>
+
+    <!-- Career Section -->
+    {% if section_1_ttl %}
+    <section class="section-01 career px my">
+      <div class="inner">
+        <p class="ttl-custom">{{ section_1_ttl }}</p>
+        <div class="txtbox mb-30px">
+          {% if department == "品質検査室" %}
+          <ul>
+            <li>関根さん、入社して間もないけれど、品質検査室で働いてみて一番「おもしろいな」と感じているところはどこかな？僕はいつも楽しそうにカメラを構えている姿を見ていて気になっていたんです。</li>
+            <li>はい、私は最初はただの材料だったコラムが、加工・製作・溶接と工程を進んで、立派な製品になっていく流れをずっと写真で追いかけられるところが好きです。<br />「材料」から「製品」になるまでを一番近くで見届けられるので、モノづくりのストーリーに立ち会っている感じがしてワクワクします。</li>
+            <li>いいね、その視点は工程写真の作業ならではの感想だね。<br />私は現在、鉄骨製品の各種検査から客先立会による製品検査の対応、それから品質書類の作成・まとめと幅広く担当していますが、検査の場でお客様に品質の合格を頂いた時に、ホッとします。関根さんはじめチームのみんながきちんとやってくれているから、合格できるんだよね。<br />品質管理や検査って、知れば知るほど奥が深いと思いませんか？</li>
+            <li>本当にそう思います。<br />写真も、ただきれいに撮ればいいわけではなくて、「後で品質を証明する大事な記録になる」と意識するようになりました。最近は材料検査も担当できるようになり、数値の意味や結果の背景が少しずつ分かってきて、「自分の仕事が製品の安全や信頼につながっているんだ」と実感しています。材料について学んでいくうちに、写真の撮り方も少し変わってきたような気がしているのですが。。</li>
+            <li>そうだね、材料や検査の過程について学んでいくうちに写真の撮り方が変わってくるよね。<br />工程を抜けなく追いかけようとする姿勢は、とても大事です。<br />私たちの仕事は、当社製品が要求品質を満たしているか妥当性を確認し、施工品質を保証すること。鋼材・加工・溶接の仕上がり、寸法精度や非破壊検査など、幅広い知識が求められます。その分責任も大きいけれど、基礎をしっかり写真や検査で支えてくれているのが関根さんたちの役割だ。頼りにしていますよ。</li>
+            <li>ありがとうございます。<br />私は撮り逃しを防ぐために、自分用の工程メモを作ったり、現場の方や先輩とのコミュニケーションを意識意識しています。将来的には、取り逃している写真など自分でも確認できるようになりたいです。そのためには日々の振り返りと、覚えることも多いですが、楽しく取り組んでいます。</li>
+            <li>その意欲があれば大丈夫です。<br />これからは材料検査だけでなく、いろいろな検査にもどんどん挑戦して、自分の「検査の目」を磨いていってほしいと思います。分からないことや不安なことがあれば、いつでも聞いてください。一緒にレベルアップして、品質検査室を品質なら任せろ！と頼れる部署にしていきましょう。</li>
+            <li>頑張ります！これからもよろしくお願いいたします。<br />品質検査室の一員として、まだまだいろいろな検査に挑戦していきたいです。</li>
+          </ul>
+          {% else %}
+          <p>{{ section_1_text }}</p>
+          {% endif %}
+        </div>
+        {% set interview07 = null %} {% for p in collections.interviews %} {% if p.fileSlug == "interview-07" %} {% set interview07 = p %} {% endif %} {% endfor %} {% if department == "品質検査室" %} {% if interview07.data.section_1_gallery %}
+        <div class="imgbox imgbox--flex">
+          {% for img in interview07.data.section_1_gallery %}
+          <div>
+            <img src="{{ dir }}/img/{{ tags }}/interview-07/{{ img }}" alt="{{ section_1_ttl }} image {{ loop.index }}" />
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %} {% else %} {% if section_1_gallery %}
+        <div class="imgbox imgbox--flex max-w-1000px mx-auto">
+          {% for img in section_1_gallery %}
+          <img src="{{ dir }}/img/{{ tags }}/{{ page.fileSlug }}/{{ img }}" alt="{{ section_1_ttl }} image {{ loop.index }}" />
+          {% endfor %}
+        </div>
+        {% endif %} {% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- Appeal Section -->
+    {% if section_2_ttl %}
+    <section class="section-02 appeal px my">
+      <div class="inner">
+        <p class="ttl-custom">{{ section_2_ttl }}</p>
+        <div class="txtbox mb-30px">
+          {% if department == "品質検査室" %}
+          <ul>
+            <li>関根さんは、どういうきっかけでこの会社に興味を持ったの？<br />確か、一度学生時代に会社に来たことがあるんだよね？</li>
+            <li>はい。きっかけは、学生時代に担当の先生からの勧めで2022年7月頃に職場見学へ行ったことです。<br />そのとき、従業員の皆さんが鉄骨の製作や検査、作図などに一生懸命取り組んでいる姿を見て、本当にカッコいいなと思いました。「自分もこの従業員さんたちの一員になりたい」と強く感じて、それが入社を決めた理由です。</li>
+            <li>そのときの印象が、今の関根さんの真面目に取り組む姿勢にもつながっているんだね。<br />私は今は品質検査室ですが、その前は「営業部兼調達部」にいて、物件の積算・見積からロール材の発注、売り上げの請求業務まで担当していました。お客様と直接話をしたり、材料がどのように手配されて現場につながっていくかという流れを見てきたので、その経験が今、検査をするときの見方にも活きていると感じます。関根さんもこれから色々な部署や色々な仕事に携わるだろうけど、品質検査室での経験は間違いなく活かすことができると思います。</li>
+            <li>
+              はい、まずは品質検査室で先輩方のように仕事をどんどん進めていけるようになりたいです。<br />三塚さんは営業や調達の仕事を経験されているからこそ、検査の前後の流れまでイメージしながら検査されているんですね。<br />
+              私は入社してからずっと品質検査室で、最初は工程写真の撮影のやり方を覚えるところからスタートしました。最近は材料検査も担当させてもらうようになって、一つ一つの業務の意味が分かってきて、「自分もやっと職場見学の時に見たカッコいい先輩たちに近づけているのかな」と思えるようになってきました。
+            </li>
+            <li>そうやって自分の成長を実感できるのはいいことだね。<br />私自身もまだまだ品質検査室で取り組みたいことはあります。検査の種類はご存じの通り本当に多いのだけれども、すべてを細かく承知しているわけではないので、非破壊検査の超音波探傷検査や浸透探傷試験について深掘りして学んでいきたいと考えています。学びを通じて、溶接の品質管理レベルの向上にしっかり貢献していきたいですね。</li>
+            <li>非破壊検査は私もいつかやってみたいです。三塚さんと一緒にいつかできる、と思うと心強いです。<br />今は検査の仕事なら何でもやってみたいという気持ちがありますが、その中でも特に寸法検査をやってみたいと思っています。寸法検査を担当するには「建築鉄骨検査技術者」という資格が必要なので、その資格の学習はもちろん、他の資格の勉強も並行して進めて、検査全般の知識と視野を広げていきたいです。</li>
+            <li>具体的に「寸法検査をやりたい」という目標があり、そのために「資格にも挑戦したい」と言えるのは、とてもいいことだね。<br />目標がはっきりしているので、きっと実現できると思いますよ。<br />資格の勉強を通して基礎知識がしっかり身につくと、現場で図面を見るときや、検査の判断をするときの自信にもつながります。今やっている工程写真や材料検査の経験も、きっと寸法検査に活きてくるはずですよ。</li>
+            <li>
+              そう言っていただけると、勉強へのモチベーションも上がります。<br />
+              日々の業務で分からないことが出てきたときには、その場でメモを取って後で調べたり、先輩方に質問したりしながら、一つずつ理解を深めていきたいです。資格取得も含めて、検査の仕事の幅をどんどん広げていけたらいいなと思っています。
+            </li>
+            <li>入社のきっかけで感じた「この会社で一緒に頑張りたい」という気持ちを忘れず、チャレンジに繋がっているのがよく分かるよ。<br />今までの経験に加えて、新しい検査技術や資格にも積極的に挑戦して、自分の強みを増やしていってほしいですね。私もできる限りサポートするので、一緒に品質検査室をもっと頼られる部署にしていきましょう。</li>
+            <li>
+              ありがとうございます。<br />
+              初心を忘れず、これからも経験と知識を積み重ねながら、自分にできることを少しずつ広げていきたいです。引き続きご指導よろしくお願いいたします。
+            </li>
+          </ul>
+          {% else %}
+          <p>{{ section_2_text }}</p>
+          {% endif %}
+        </div>
+
+        {% if section_2_gallery %}
+        <div class="imgbox imgbox--flex max-w-1000px mx-auto">
+          {% for img in section_2_gallery %}
+          <div>
+            <img src="{{ dir }}/img/{{ tags }}/{{ page.fileSlug }}/{{ img }}" alt="{{ section_2_ttl }} image {{ loop.index }}" />
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </section>
+    {% endif %}
+
+    <!-- Plan / Future Ambition -->
+    {% if section_3_ttl %}
+    <section class="section-03 plan px my">
+      <div class="inner">
+        <p class="ttl-custom">{{ section_3_ttl }}</p>
+        <div class="txtbox mb-30px">
+          {% if department == "品質検査室" %}
+          <ul>
+            <li>三塚さんから見た王子工営北海道で仕事をすることの魅力は何ですか？</li>
+            <li>王子工営北海道で働いていて一番うれしいのは、先輩方が築いてきた信頼と実績のおかげで大手企業と取引できたり、地図に残るような著名な案件に関われるところかな。<br />「あのビル、実はうちが納めた鉄骨で作られているんだよ」と家族や友人に話せるのは、やっぱり誇らしいよね。</li>
+            <li>それは私もすごく感じます。<br />鉄骨を作る過程では、加工・製作・検査など、色々な部署の多くの人が同じゴールに向かって仕事をしていますよね。役割は違っても、最終的には全員が一丸となって「良い製品をつくろう」という気持ちで取り組んでいるところが、王子工営北海道の一番の魅力だと思っています。<br />その上で、自分の得意な分野を活かせるくらい仕事の種類が多いのもとても魅力的です。<br />そろそろ座談会も終盤ですが、三塚さんから僕たち後輩に何かアドバイスをいただけないでしょうか。</li>
+            <li>そうだね、三塚さんだけでなくみんなに伝えたいのは、「報連相」の大切さです。<br />情報を共有することで、仕事の効率がよくなり、品質も工場します。分からないことをそのままにせず、聞けるうちにどんどん聞いてほしいな。<br />聞けるときに聞いておく、というのは成長への一歩だし、失敗を怖がりすぎる必要も全くない。困ったことがあれば、遠慮なく相談してほしいですね。私たち先輩はそのためにいるので。</li>
+            <li>ありがとうございます。改めて、いつも鉄骨や検査のことを丁寧に教えてくださっている先輩方に感謝しています。<br />製品のことや検査のポイントなど、まだ分からないところをたくさん教えていただいています。これからも検査のことに限らず、鉄骨そのものについてもっと学んでいきたいので、引き続きご指導いただけるとうれしいです。</li>
+            <li>こうして先輩が後輩に知識や技術を受け継いでいけるのも、この会社の良さかもしれないね。<br />私自身も先輩方からたくさん学びました。失敗を通じて学んだことももちろんたくさんあるよ。<br />大きな案件に関わるチャンスが常にあり、その中で自分のスキルも着実に磨いていける。王子工営北海道は真面目に取り組む人を、周りがきちんと支えてくれる環境だと感じます。</li>
+            <li>はい。モノづくりが好きな人、チームで建築物を作り上げる達成感を味わいたい人には、とても合っている職場だと思います。<br />王子工営北海道は、自分の得意分野を活かしながら成長していける会社なので、「今はまだ知識が足りないところもあるけれど、よく学び、鉄骨や建物に関わる大きな仕事がしてみたい」と思っている方が一緒に働いてくれることを楽しみにしています。</li>
+          </ul>
+          {% else %}
+          <p>{{ section_3_text }}</p>
+          {% endif %}
+        </div>
+
+        {% if section_3_gallery %}
+        <div class="imgbox max-w-1000px mx-auto">
+          {% for img in section_3_gallery %}
+          <div>
+            {% if department == "品質検査室" %}
+            <img src="{{ dir }}/img/{{ tags }}/interview-06/img_03.png" alt="{{ section_3_ttl }} image {{ loop.index }}" />
+            {% else %}
+            <img src="{{ dir }}/img/{{ tags }}/{{ page.fileSlug }}/{{ img }}" alt="{{ section_3_ttl }} image {{ loop.index }}" />
+            {% endif %}
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </section>
+    {% endif %} {% if section_4_ttl %}
+    <section class="section-04 px my">
+      <div class="inner">
+        <p class="ttl-custom">{{ section_4_ttl }}</p>
+        <div class="txtbox mb-30px">
+          {% if department == "品質検査室" %} {% else %}
+          <p>{{ section_4_text }}</p>
+          {% endif %}
+        </div>
+
+        {% if section_4_gallery %}
+        <div class="imgbox">
+          {% for img in section_4_gallery %}
+          <div>
+            <img src="{{ dir }}/img/{{ tags }}/{{ page.fileSlug }}/{{ img }}" alt="{{ section_4_ttl }} image {{ loop.index }}" />
+          </div>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </div>
+    </section>
+
+    {% endif %}
+
+    <!-- Schedule -->
+    <section class="schedule px py">
+      <div class="inner">
+        {% if department == "品質検査室" %} {# Find interview-06 and interview-07 from the collection #} {% set interview06 = null %} {% set interview07 = null %} {% for p in collections.interviews %} {% if p.fileSlug == "interview-06" %} {% set interview06 = p %} {% endif %} {% if p.fileSlug == "interview-07" %} {% set interview07 = p %} {% endif %} {% endfor %}
+
+        <div class="flex-schedules">
+          {% if interview06 and interview06.data.schedule %}
+          <div class="schedule-block">
+            <p class="text-h3 color-main-dark mb-60px text-center">1日のスケジュール<br />（Y・M）</p>
+            {% for item in interview07.data.schedule %}
+            <dl>
+              <dt>{{ item.time }}</dt>
+              {% for t in item.text %}
+              <dd>
+                <p class="ttl">{{ t.ttl }}</p>
+                {% if t.desc %}
+                <p class="desc">{{ t.desc }}</p>
+                {% endif %}
+              </dd>
+              {% endfor %}
+            </dl>
+            {% endfor %}
+          </div>
+          {% endif %} {% if interview07 and interview07.data.schedule %}
+          <div class="schedule-block">
+            <p class="text-h3 color-main-dark mb-60px text-center">1日のスケジュール<br />（H・S）</p>
+            {% for item in interview06.data.schedule %}
+            <dl>
+              <dt>{{ item.time }}</dt>
+              {% for t in item.text %}
+              <dd>
+                <p class="ttl">{{ t.ttl }}</p>
+                {% if t.desc %}
+                <p class="desc">{{ t.desc }}</p>
+                {% endif %}
+              </dd>
+              {% endfor %}
+            </dl>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
+        {% else %}
+        <div class="max-w-1000px mx-auto">
+          <p class="text-h3 color-main-dark mb-60px text-center">1日のスケジュール</p>
+          {% for item in schedule %}
+          <dl>
+            <dt>{{ item.time }}</dt>
+            {% for t in item.text %}
+            <dd>
+              <p class="ttl">{{ t.ttl }}</p>
+              {% if t.desc %}
+              <p class="desc">{{ t.desc }}</p>
+              {% endif %}
+            </dd>
+            {% endfor %}
+          </dl>
+          {% endfor %} {% endif %}
+        </div>
+      </div>
+    </section>
+
+    {% include "interview_slider.njk" %}
+  </article>
+</main>
+{% include "footer.njk" %}

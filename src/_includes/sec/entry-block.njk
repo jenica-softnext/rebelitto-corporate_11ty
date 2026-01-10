@@ -1,0 +1,61 @@
+<link rel="stylesheet" href="{{ dir }}/mfp.statics/mailformpro.css" type="text/css" />
+<link rel="stylesheet" href="{{ dir }}/css/mfp-add.css" type="text/css" />
+<div class="entry-contents">
+  <div class="contact-block">
+    <div class="container">
+      <div class="contact__sec">
+        <form class="contact__form" id="mailformpro" action="{{ dir }}/mailformpro/mailformpro.cgi" method="POST">
+          <table class="mb-30px">
+            <tbody>
+              <tr>
+                <th><span class="must">必須</span>応募種別</th>
+                <td class="checkblock">
+                  <label for="gender1"><input type="checkbox" id="" />新卒採用</label>
+                  <label for="gender2"><input type="checkbox" id="" />中途採用</label>
+                </td>
+              </tr>
+              <tr>
+                <th><span class="must">必須</span>希望職種</th>
+                <td class="checkblock">
+                  <label for="gender1"><input type="checkbox" id="" />技術職(建設鉄骨製作スタッフ)</label>
+                  <label for="gender2"><input type="checkbox" id="" />技術職（CAD）</label>
+                  <label for="gender3"> <input type="checkbox" id="" />技能職（鉄骨加工・溶接）</label>
+                </td>
+              </tr>
+              <tr>
+                <th><span class="must">必須</span>お名前</th>
+                <td><input placeholder="例）山田 太郎" type="text" name="お名前" required /></td>
+              </tr>
+              <tr>
+                <th><span class="must">必須</span>お名前（カナ）</th>
+                <td><input placeholder="例）ヤマダ タロウ" type="text" name="お名前（カナ）" required /></td>
+              </tr>
+              <tr>
+                <th><span class="must">必須</span>電話番号</th>
+                <td><input placeholder="例）090-1234-5678" type="text" name="電話番号" required /></td>
+              </tr>
+              <tr>
+                <th><span class="must">必須</span>メールアドレス</th>
+                <td><input placeholder="例）sample@saiyou.jp" type="text" name="メールアドレス" required /></td>
+              </tr>
+              <tr>
+                <th><span class="must">必須</span>メールアドレス（確認用）</th>
+                <td><input placeholder="例）sample@saiyou.jp" type="text" name="メールアドレス（確認用）" required /></td>
+              </tr>
+              <tr>
+                <th class="textarea_ttl"><span class="must hide">必須</span>備考欄</th>
+                <td><textarea cols="30" rows="10" name="連絡の繋がりやすい時間帯など、ご要望がありましたら記載ください。" placeholder="連絡の繋がりやすい時間帯など、ご要望がありましたら記載ください。" required></textarea></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="center"><input type="submit" class="btn bg-main rounded mx-auto" value="送信する" /></div>
+        </form>
+        <script type="text/javascript" id="mfpjs" src="{{ dir }}/mailformpro/mailformpro.cgi" charset="UTF-8"></script>
+      </div>
+      <!-- //contact__sec -->
+    </div>
+    <!-- //container -->
+  </div>
+  <!-- //contact-block -->
+</div>
+<!-- //entry-content -->
