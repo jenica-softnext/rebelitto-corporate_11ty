@@ -40,27 +40,13 @@
     <link rel="stylesheet" type="text/css" href="./css/header.css" />
     <link rel="stylesheet" type="text/css" href="./css/animation.css" />
     <link rel="stylesheet" type="text/css" href="./loader/loader.css" />
-        <link rel="stylesheet" type="text/css" href="./loader/loader-bg.css" />
     
     <link rel="stylesheet" type="text/css" href="./css/top.css" />
     
 
     <!-- Javascript -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="./js/functions.js"></script>
-
-    <!-- Slick CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    />
-
-    <!-- Slick JS -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
   <div id="custom-cursor"></div>
   <body class="top">
@@ -72,37 +58,51 @@
               <img src="./img/logo-header.png" alt="logo" class="pc" />
             </a>
           </div>
-          <nav>
-            <ul class="nav_list">
-              <li class="nav_item">
-                <a href="./index.html#about" class="nav_link"
-                  >リベリットについて</a
+          <div class="nav-flexbox">
+            <nav>
+              <ul class="nav_list">
+                <li class="nav_item">
+                  <a href="./index.html#about" class="nav_link"
+                    >リベリットについて</a
+                  >
+                </li>
+                <li class="nav_item">
+                  <a href="./index.html#business" class="nav_link"
+                    >業務内容</a
+                  >
+                </li>
+                <li class="nav_item">
+                  <a href="./index.html#access" class="nav_link"
+                    >アクセス</a
+                  >
+                </li>
+                <li class="nav_item sp">
+                  <a href="./contact/index.html" class="nav_link"
+                    >お問い合わせ</a
+                  >
+                </li>
+                <li class="nav_item sp">
+                  <a href="./privacy/index.html" class="nav_link"
+                    >プライバシーポリシー</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div class="menu-flexbox">
+              <div class="cta">
+                <a
+                  href="./contact/index.html"
+                  class="cta_link btn bg-main rounded rounded-full"
+                  ><span>お問い合わせ</span></a
                 >
-              </li>
-              <li class="nav_item">
-                <a href="./index.html#business" class="nav_link"
-                  >業務内容</a
-                >
-              </li>
-              <li class="nav_item">
-                <a href="./index.html#access" class="nav_link"
-                  >アクセス</a
-                >
-              </li>
-            </ul>
-            <div class="cta">
-              <a
-                href="./contact/index.html"
-                class="cta_link btn bg-main rounded rounded-full"
-                >お問い合わせ</a
-              >
+              </div>
+              <button class="hamburger" id="hamburger" aria-label="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
             </div>
-          </nav>
-          <button class="hamburger" id="hamburger" aria-label="menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          </div>
         </div>
       </div>
     </header>
@@ -159,13 +159,13 @@
         </div>
       </div>
     </section>
-    <section id="insurance" class="insurance px py">
+    <section id="business" class="business px py">
       <div class="inner">
         <p class="section_ttl text-h1 mb-30px">●業務内容</p>
         <div class="cards mb-30px">
           <div class="card animate-bottom">
             <div class="card_imgbox">
-              <img src="./img/common/gear.png" alt="insurance-img_01" />
+              <img src="./img/common/gear.png" alt="business-img_01" />
             </div>
             <div class="card_txtbox">
               <p class="card_ttl">消防設備工事・設計・保守</p>
@@ -179,7 +179,7 @@
             <div class="card_imgbox">
               <img
                 src="./img/common/extinguisher.png"
-                alt="insurance-img_02"
+                alt="business-img_02"
               />
             </div>
             <div class="card_txtbox">
@@ -192,10 +192,7 @@
 
           <div class="card animate-bottom">
             <div class="card_imgbox">
-              <img
-                src="./img/common/house.png"
-                alt="insurance-img_03"
-              />
+              <img src="./img/common/house.png" alt="business-img_03" />
             </div>
             <div class="card_txtbox">
               <p class="card_ttl">安心して暮らせる社会</p>
@@ -209,7 +206,7 @@
             <div class="card_imgbox">
               <img
                 src="./img/common/avatar.png"
-                alt="insurance-img_04"
+                alt="business-img_04"
               />
             </div>
             <div class="card_txtbox">
@@ -244,9 +241,7 @@
     <section id="access" class="access">
       <div class="inner">
         <div class="txtbox py px animate-bottom">
-          <p
-            class="section_ttl text-h1 text-center mb-30px color-white"
-          >
+          <p class="section_ttl text-h1 text-center mb-30px color-white">
             アクセス
           </p>
           <p class="address">
@@ -255,7 +250,7 @@
         </div>
         <div class="map animate-bottom">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2918.4505734251534!2d141.47335137650376!3d42.989846095081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f74d4e1a0f59977%3A0x61cc24409e52b9e0!2z5pel5pys44CB44CSMDA0LTA4MDUg5YyX5rW36YGT5pyt5bmM5biC5riF55Sw5Yy66YeM5aGa57eR44Kx5LiY77yR77yR5LiB55uu77yY4oiS77yY!5e0!3m2!1sja!2sph!4v1767942460262!5m2!1sja!2sph"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d69921.17729398742!2d141.3317220433594!3d42.98987630000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f74d4e1a08d9135%3A0x11a7e423c3d1e96f!2z44ix44Oq44OZ44Oq44OD44OI!5e1!3m2!1sja!2sph!4v1768182625326!5m2!1sja!2sph"
             width="100%"
             height="450"
             style="border: 0"
@@ -318,6 +313,5 @@
   <script src="./loader/loader.js"></script>
   <script src="./js/scroll-trigger.js"></script>
   <script src="./js/animation.js"></script>
-  <script src="./js/functions.js"></script>
 </footer>
 

@@ -40,27 +40,13 @@
     <link rel="stylesheet" type="text/css" href="../../css/header.css" />
     <link rel="stylesheet" type="text/css" href="../../css/animation.css" />
     <link rel="stylesheet" type="text/css" href="../../loader/loader.css" />
-        <link rel="stylesheet" type="text/css" href="../../loader/loader-bg.css" />
     
     <link rel="stylesheet" type="text/css" href="../../css/lower.css" />
     
 
     <!-- Javascript -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../../js/functions.js"></script>
-
-    <!-- Slick CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    />
-
-    <!-- Slick JS -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
   <div id="custom-cursor"></div>
   <body class="news">
@@ -72,37 +58,51 @@
               <img src="../../img/logo-header.png" alt="logo" class="pc" />
             </a>
           </div>
-          <nav>
-            <ul class="nav_list">
-              <li class="nav_item">
-                <a href="../../index.html#about" class="nav_link"
-                  >リベリットについて</a
+          <div class="nav-flexbox">
+            <nav>
+              <ul class="nav_list">
+                <li class="nav_item">
+                  <a href="../../index.html#about" class="nav_link"
+                    >リベリットについて</a
+                  >
+                </li>
+                <li class="nav_item">
+                  <a href="../../index.html#business" class="nav_link"
+                    >業務内容</a
+                  >
+                </li>
+                <li class="nav_item">
+                  <a href="../../index.html#access" class="nav_link"
+                    >アクセス</a
+                  >
+                </li>
+                <li class="nav_item sp">
+                  <a href="../../contact/index.html" class="nav_link"
+                    >お問い合わせ</a
+                  >
+                </li>
+                <li class="nav_item sp">
+                  <a href="../../privacy/index.html" class="nav_link"
+                    >プライバシーポリシー</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div class="menu-flexbox">
+              <div class="cta">
+                <a
+                  href="../../contact/index.html"
+                  class="cta_link btn bg-main rounded rounded-full"
+                  ><span>お問い合わせ</span></a
                 >
-              </li>
-              <li class="nav_item">
-                <a href="../../index.html#business" class="nav_link"
-                  >業務内容</a
-                >
-              </li>
-              <li class="nav_item">
-                <a href="../../index.html#access" class="nav_link"
-                  >アクセス</a
-                >
-              </li>
-            </ul>
-            <div class="cta">
-              <a
-                href="../../contact/index.html"
-                class="cta_link btn bg-main rounded rounded-full"
-                >お問い合わせ</a
-              >
+              </div>
+              <button class="hamburger" id="hamburger" aria-label="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
             </div>
-          </nav>
-          <button class="hamburger" id="hamburger" aria-label="menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          </div>
         </div>
       </div>
     </header>
@@ -236,6 +236,5 @@
   <script src="../../loader/loader.js"></script>
   <script src="../../js/scroll-trigger.js"></script>
   <script src="../../js/animation.js"></script>
-  <script src="../../js/functions.js"></script>
 </footer>
 

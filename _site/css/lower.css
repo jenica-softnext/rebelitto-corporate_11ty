@@ -544,62 +544,62 @@
   box-shadow: 0 0 8px 4px #e9e9e9c4;
 }
 
-/* insurance */
-.insurance {
+/* business */
+.business {
   background: var(--main-lighter-color);
 }
 
-.insurance .insurance-nav .inner {
+.business .business-nav .inner {
   background: #fff;
   border-radius: 20px;
   padding: var(--section-py) var(--section-px);
 }
 
-.insurance .insurance-nav .list {
+.business .business-nav .list {
   display: flex;
   flex-wrap: wrap;
 }
 
-.insurance .insurance-nav .list .item {
+.business .business-nav .list .item {
   width: 50%;
 }
 
-.insurance .insurance-nav .list .item_link {
+.business .business-nav .list .item_link {
   text-align: center;
   display: block;
   font-size: 20px;
 }
 
-.insurance .cards {
+.business .cards {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.insurance .cards .card {
+.business .cards .card {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 0 8px 4px #e9e9e9c4;
   padding: 20px;
 }
 
-.insurance .cards .card .btnbox {
+.business .cards .card .btnbox {
   display: flex;
   gap: 10px;
   justify-content: flex-end;
   flex-wrap: wrap;
 }
 
-.insurance .cards .card_ttl {
+.business .cards .card_ttl {
   font-size: 20px;
   font-weight: 600;
 }
 
-.insurance .cards .card_subttl {
+.business .cards .card_subttl {
   margin-bottom: 30px;
 }
 
-.insurance .cards .card .btnbox .btn {
+.business .cards .card .btnbox .btn {
   min-width: 100px;
   padding: 10px 15px;
 }
@@ -681,7 +681,7 @@
     width: 100%;
   }
 
-  .insurance .insurance-nav .list .item_link {
+  .business .business-nav .list .item_link {
     font-size: 18px;
   }
 }
@@ -798,7 +798,7 @@
     width: 100%;
   }
 
-  .insurance .insurance-nav .list .item_link {
+  .business .business-nav .list .item_link {
     font-size: 16px;
   }
 }
@@ -928,7 +928,7 @@
     z-index: 0;
   }
 
-  .insurance .cards .card .btnbox {
+  .business .cards .card .btnbox {
     justify-content: center;
   }
 

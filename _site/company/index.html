@@ -40,27 +40,13 @@
     <link rel="stylesheet" type="text/css" href="../css/header.css" />
     <link rel="stylesheet" type="text/css" href="../css/animation.css" />
     <link rel="stylesheet" type="text/css" href="../loader/loader.css" />
-        <link rel="stylesheet" type="text/css" href="../loader/loader-bg.css" />
     
     <link rel="stylesheet" type="text/css" href="../css/lower.css" />
     
 
     <!-- Javascript -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="../js/functions.js"></script>
-
-    <!-- Slick CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
-    />
-
-    <!-- Slick JS -->
-    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
   </head>
   <div id="custom-cursor"></div>
   <body class="company">
@@ -72,37 +58,51 @@
               <img src="../img/logo-header.png" alt="logo" class="pc" />
             </a>
           </div>
-          <nav>
-            <ul class="nav_list">
-              <li class="nav_item">
-                <a href="../index.html#about" class="nav_link"
-                  >リベリットについて</a
+          <div class="nav-flexbox">
+            <nav>
+              <ul class="nav_list">
+                <li class="nav_item">
+                  <a href="../index.html#about" class="nav_link"
+                    >リベリットについて</a
+                  >
+                </li>
+                <li class="nav_item">
+                  <a href="../index.html#business" class="nav_link"
+                    >業務内容</a
+                  >
+                </li>
+                <li class="nav_item">
+                  <a href="../index.html#access" class="nav_link"
+                    >アクセス</a
+                  >
+                </li>
+                <li class="nav_item sp">
+                  <a href="../contact/index.html" class="nav_link"
+                    >お問い合わせ</a
+                  >
+                </li>
+                <li class="nav_item sp">
+                  <a href="../privacy/index.html" class="nav_link"
+                    >プライバシーポリシー</a
+                  >
+                </li>
+              </ul>
+            </nav>
+            <div class="menu-flexbox">
+              <div class="cta">
+                <a
+                  href="../contact/index.html"
+                  class="cta_link btn bg-main rounded rounded-full"
+                  ><span>お問い合わせ</span></a
                 >
-              </li>
-              <li class="nav_item">
-                <a href="../index.html#business" class="nav_link"
-                  >業務内容</a
-                >
-              </li>
-              <li class="nav_item">
-                <a href="../index.html#access" class="nav_link"
-                  >アクセス</a
-                >
-              </li>
-            </ul>
-            <div class="cta">
-              <a
-                href="../contact/index.html"
-                class="cta_link btn bg-main rounded rounded-full"
-                >お問い合わせ</a
-              >
+              </div>
+              <button class="hamburger" id="hamburger" aria-label="menu">
+                <span></span>
+                <span></span>
+                <span></span>
+              </button>
             </div>
-          </nav>
-          <button class="hamburger" id="hamburger" aria-label="menu">
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          </div>
         </div>
       </div>
     </header>
@@ -166,7 +166,9 @@
     </section>
     <section class="px my">
       <div class="inner">
-        <p class="section_ttl border-bottom border-bottom text-h1 color-main">代表挨拶</p>
+        <p class="section_ttl border-bottom border-bottom text-h1 color-main">
+          代表挨拶
+        </p>
         <div class="txtbox">
           <p>
             弊社は昭和42年9月株式会社川田商会保険部として、その後昭和61年8月に株式会社川田産業を設立し地元白老町に根差した保険代理店として歩んでまいりました。<br />川田産業では、「安心・安全・誠意あるコンサルティング対応」を全ての基盤としております。お客様お一人おひとりのニーズを真摯に受け止め、誠心誠意お応えできるよう、良好なコミュニケーションを何よりも大切にしています。
@@ -184,7 +186,9 @@
     </section>
     <section class="profile px my">
       <div class="inner">
-        <p class="section_ttl border-bottom border-bottom color-main text-h1">会社概要</p>
+        <p class="section_ttl border-bottom border-bottom color-main text-h1">
+          会社概要
+        </p>
         <div class="infobox">
           <dl>
             <dt>会社名</dt>
@@ -216,7 +220,7 @@
           </dl>
           <dl>
             <dt>E-mail</dt>
-            <dd>kawadasangyo@n1003042.insurance-agt.ne.jp</dd>
+            <dd>kawadasangyo@n1003042.business-agt.ne.jp</dd>
           </dl>
           <dl>
             <dt>グループ会社</dt>
@@ -249,7 +253,9 @@
     </section>
     <section class="organization px my">
       <div class="inner">
-        <p class="section_ttl border-bottom border-bottom color-main text-h1">組織図</p>
+        <p class="section_ttl border-bottom border-bottom color-main text-h1">
+          組織図
+        </p>
         <div class="txtbox">
           <p>
             責任者<br />・代表取締役　川田 千春<br />（コンプライアンス管理責任者）<br />（事故対応責任者）
@@ -277,7 +283,9 @@
     </section>
     <section class="customer-service px my">
       <div class="inner">
-        <p class="section_ttl border-bottom border-bottom color-main text-h1">お客様対応基本方針FD宣言</p>
+        <p class="section_ttl border-bottom border-bottom color-main text-h1">
+          お客様対応基本方針FD宣言
+        </p>
         <p class="mb-30px">
           お客様には「安心・安全・総合コンサルティング」を基本に真摯姿勢で対応いたします。<br />
           お客様のニーズを先読みしてお答えする事で、より良いコミュニケーションを確立します。
@@ -378,6 +386,5 @@
   <script src="../loader/loader.js"></script>
   <script src="../js/scroll-trigger.js"></script>
   <script src="../js/animation.js"></script>
-  <script src="../js/functions.js"></script>
 </footer>
 
