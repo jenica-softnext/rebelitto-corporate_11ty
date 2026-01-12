@@ -1,6 +1,6 @@
 AuthType Basic
 AuthName "Secure Content"
-AuthUserFile /home/philippines01/www/philidev/oji-machinery-hokkaido-recruit/.htpasswd
+AuthUserFile /home/philippines01/www/philidev/rebelitto-corporate-11ty/.htpasswd
 require valid-user
 
 RewriteEngine On
